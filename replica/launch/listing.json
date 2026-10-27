@@ -1,0 +1,7 @@
+{
+  "name": "Spoookify",
+  "tagline": "Your spooky soundscape",
+  "description": "Music streaming with playlists, library, and multi-platform access",
+  "keywords": ["music", "streaming", "playlists", "cli"],
+  "category": "Music"
+}
