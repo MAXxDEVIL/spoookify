@@ -409,3 +409,38 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 **Version:** 0.1.0 | **Last Updated:** October 28, 2026 | **Status:** In Development
+
+## Easy Installation (Recommended)
+
+Install the prebuilt CLI binary with a single command - no build tools required!
+
+### Linux & macOS
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/username/spoookify/main/install.sh | bash
+```
+
+### Windows (PowerShell)
+
+```powershell
+irm https://raw.githubusercontent.com/username/spoookify/main/install.ps1 | iex
+```
+
+### What this does
+
+- Downloads the prebuilt binary for your OS and architecture
+- Installs to `~/.local/bin` (Linux/macOS) or `%USERPROFILE%\.spoookify\bin` (Windows)
+- Makes it executable and adds to PATH
+- No compilation or dependencies required
+
+### Manual Download
+
+Download binaries directly from [GitHub Releases](https://github.com/username/spoookify/releases):
+- `spoookify-linux-amd64` / `spoookify-linux-arm64`
+- `spoookify-darwin-amd64` / `spoookify-darwin-arm64`
+- `spoookify-windows-amd64.exe`
+
+## Version
+
+**Current Version:** 0.1.0
+
