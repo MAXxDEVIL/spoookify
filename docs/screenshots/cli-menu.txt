@@ -1,0 +1,9 @@
+Spoookify CLI
+
+> Home
+  Search
+  Library
+  Playlists
+  Now Playing
+
+Press q to quit

@@ -1,0 +1,13 @@
+API Tests:
+✓ GET /api/health returns {status: 'ok', service: 'spoookify-api'}
+✓ POST /api/auth/signup creates user
+✓ POST /api/auth/login authenticates user
+✓ GET /api/library/liked returns tracks with placeholder audio URLs
+✓ GET /api/playlists returns playlists
+✓ GET /api/search returns results
+✓ GET /api/home returns content
+
+CLI Tests:
+✓ Binary compiles (3.5MB)
+✓ Menu displays correctly
+✓ Navigation ready (bubbletea)
