@@ -115,13 +115,13 @@ Install the prebuilt CLI binary with a single command - no build tools required!
 #### Linux & macOS
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/username/spoookify/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/MAXxDEVIL/spoookify/main/install.sh | bash
 ```
 
 #### Windows (PowerShell)
 
 ```powershell
-irm https://raw.githubusercontent.com/username/spoookify/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/MAXxDEVIL/spoookify/main/install.ps1 | iex
 ```
 
 **What this does:**
@@ -135,7 +135,7 @@ irm https://raw.githubusercontent.com/username/spoookify/main/install.ps1 | iex
 #### 1. Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/spoookify.git
+git clone https://github.com/yourMAXxDEVIL/spoookify.git
 cd spoookify
 ```
 
@@ -436,7 +436,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ### Manual Download
 
-Download binaries directly from [GitHub Releases](https://github.com/username/spoookify/releases):
+Download binaries directly from [GitHub Releases](https://github.com/MAXxDEVIL/spoookify/releases):
 - `spoookify-linux-amd64` / `spoookify-linux-arm64`
 - `spoookify-darwin-amd64` / `spoookify-darwin-arm64`
 - `spoookify-windows-amd64.exe`

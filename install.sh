@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-REPO="username/spoookify"
+REPO="MAXxDEVIL/spoookify"
 VERSION="v0.1.0"
 BINARY_NAME="spoookify"
 INSTALL_DIR="${HOME}/.local/bin"

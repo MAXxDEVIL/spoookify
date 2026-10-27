@@ -1,9 +1,9 @@
 # Spoookify CLI Installer for Windows
-# Usage: irm https://raw.githubusercontent.com/username/spoookify/main/install.ps1 | iex
+# Usage: irm https://raw.githubusercontent.com/MAXxDEVIL/spoookify/main/install.ps1 | iex
 
 $ErrorActionPreference = "Stop"
 
-$Repo = "username/spoookify"
+$Repo = "MAXxDEVIL/spoookify"
 $Version = "v0.1.0"
 $BinaryName = "spoookify"
 $InstallDir = "$env:USERPROFILE\.spoookify\bin"
