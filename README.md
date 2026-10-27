@@ -108,20 +108,44 @@ spoookify/
 
 ## Installation
 
-### 1. Clone Repository
+### Easy Installation (Recommended)
+
+Install the prebuilt CLI binary with a single command - no build tools required!
+
+#### Linux & macOS
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/username/spoookify/main/install.sh | bash
+```
+
+#### Windows (PowerShell)
+
+```powershell
+irm https://raw.githubusercontent.com/username/spoookify/main/install.ps1 | iex
+```
+
+**What this does:**
+- Downloads the prebuilt binary for your OS and architecture
+- Installs to `~/.local/bin` (Linux/macOS) or `%USERPROFILE%\.spoookify\bin` (Windows)
+- Makes it executable and adds to PATH
+- No compilation or dependencies required
+
+### Manual Installation (From Source)
+
+#### 1. Clone Repository
 
 ```bash
 git clone https://github.com/yourusername/spoookify.git
 cd spoookify
 ```
 
-### 2. Install Dependencies
+#### 2. Install Dependencies
 
 ```bash
 pnpm install
 ```
 
-### 3. Environment Setup
+#### 3. Environment Setup
 
 Create environment files for the API:
 
@@ -131,7 +155,7 @@ DATABASE_URL=postgresql://user:password@localhost:5432/spoookify
 NEXT_PUBLIC_API_URL=http://localhost:3000
 ```
 
-### 4. Database Setup (Optional)
+#### 4. Database Setup (Optional)
 
 ```bash
 cd packages/db
@@ -409,29 +433,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 **Version:** 0.1.0 | **Last Updated:** October 28, 2026 | **Status:** In Development
-
-## Easy Installation (Recommended)
-
-Install the prebuilt CLI binary with a single command - no build tools required!
-
-### Linux & macOS
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/username/spoookify/main/install.sh | bash
-```
-
-### Windows (PowerShell)
-
-```powershell
-irm https://raw.githubusercontent.com/username/spoookify/main/install.ps1 | iex
-```
-
-### What this does
-
-- Downloads the prebuilt binary for your OS and architecture
-- Installs to `~/.local/bin` (Linux/macOS) or `%USERPROFILE%\.spoookify\bin` (Windows)
-- Makes it executable and adds to PATH
-- No compilation or dependencies required
 
 ### Manual Download
 
