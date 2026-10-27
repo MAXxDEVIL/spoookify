@@ -22,7 +22,7 @@ if ($Arch -eq "AMD64") {
 }
 
 $BinaryFile = "$BinaryName-windows-$ArchType.exe"
-$DownloadUrl = "https://github.com/$Repo/releases/download/$Version/$BinaryFile"
+$DownloadUrl = "https://raw.githubusercontent.com/$Repo/main/bin/$BinaryFile"
 
 # Create install directory
 New-Item -ItemType Directory -Force -Path $InstallDir | Out-Null

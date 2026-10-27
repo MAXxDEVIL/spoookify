@@ -436,7 +436,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ### Manual Download
 
-Download binaries directly from [GitHub Releases](https://github.com/MAXxDEVIL/spoookify/releases):
+Download binaries directly from [bin/](https://github.com/MAXxDEVIL/spoookify/tree/main/bin):
 - `spoookify-linux-amd64` / `spoookify-linux-arm64`
 - `spoookify-darwin-amd64` / `spoookify-darwin-arm64`
 - `spoookify-windows-amd64.exe`

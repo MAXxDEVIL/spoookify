@@ -41,7 +41,7 @@ else
   BINARY_FILE="${BINARY_NAME}-${OS_TYPE}-${ARCH_TYPE}"
 fi
 
-DOWNLOAD_URL="https://github.com/${REPO}/releases/download/${VERSION}/${BINARY_FILE}"
+DOWNLOAD_URL="https://raw.githubusercontent.com/${REPO}/main/bin/${BINARY_FILE}"
 
 # Create install directory
 mkdir -p "$INSTALL_DIR"
