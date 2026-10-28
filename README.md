@@ -164,6 +164,26 @@ pnpm drizzle-kit generate
 pnpm drizzle-kit push
 ```
 
+## Mobile App
+
+### Download APK (Android)
+Download and install the prebuilt APK directly on your Android device:
+
+1. **Download** - Get the latest `spoookify-v0.1.0.apk` from [GitHub Releases](https://github.com/MAXxDEVIL/spoookify/releases)
+2. **Allow Installation** - Enable "Install from unknown sources" in your Android settings for your browser/file manager
+3. **Install** - Open the downloaded APK and follow the prompts to install
+4. **Start API** - On your PC, run `cd apps/api && npx next dev -H 0.0.0.0 -p 3000` (must be on same WiFi network)
+5. **Launch** - Open the Spoookify app on your device
+
+### Build APK Locally
+```bash
+cd apps/mobile
+npx expo prebuild
+cd android
+./gradlew assembleRelease
+# APK: android/app/build/outputs/apk/release/app-release.apk
+```
+
 ## Usage
 
 ### Development Mode
@@ -280,6 +300,17 @@ spoookify/
 │   │   ├── go.mod         # Go dependencies
 │   │   └── spoookify      # Compiled binary (3.5MB)
 │   └── mobile/             # Expo React Native App
+│       ├── app/           # Expo Router screens (tabs)
+│       │   ├── (tabs)/    # Tab navigation (Home, Search, Library)
+│       │   └── _layout.tsx
+│       ├── components/    # Reusable UI components
+│       │   ├── TrackRow.tsx
+│       │   ├── PlaylistCard.tsx
+│       │   └── NowPlayingBar.tsx
+│       ├── lib/           # API client & config
+│       ├── constants/     # Colors & theme
+│       ├── tailwind.config.js
+│       └── package.json
 ├── packages/
 │   ├── types/              # Shared TypeScript types
 │   │   └── index.ts
@@ -299,6 +330,9 @@ spoookify/
 │   └── deploy.md          # Deployment guide
 ├── docs/
 │   └── screenshots/        # Proof of concept screenshots & test results
+├── bin/                    # Prebuilt CLI binaries
+├── install.sh
+├── install.ps1
 ├── package.json
 ├── pnpm-workspace.yaml
 ├── turbo.json
@@ -444,75 +478,3 @@ Download binaries directly from [bin/](https://github.com/MAXxDEVIL/spoookify/tr
 ## Version
 
 **Current Version:** 0.1.0
-
-
-## Mobile App
-
-The Spoookify mobile app is built with Expo and React Native, providing a native mobile experience.
-
-### Download APK (Android)
-Download and install the prebuilt APK directly on your Android device:
-
-1. **Download** - Get the latest `spoookify-v0.1.0.apk` from [GitHub Releases](https://github.com/MAXxDEVIL/spoookify/releases)
-2. **Allow Installation** - Enable "Install from unknown sources" in your Android settings for your browser/file manager
-3. **Install** - Open the downloaded APK and follow the prompts to install
-4. **Start API** - On your PC, run `cd apps/api && npx next dev -H 0.0.0.0 -p 3000` (must be on same WiFi network)
-5. **Launch** - Open the Spoookify app on your device
-
-### Features
-- **Home Tab** - Browse recommended content and playlists
-- **Search Tab** - Search for tracks, artists, albums, and playlists
-- **Library Tab** - Access your playlists and liked songs
-- **Dark Theme** - Spoookify's custom indigo color scheme
-- **API Integration** - Connects to the shared Next.js API
-
-### Running in Development (Expo Go)
-
-1. **Start the API server on your network:**
-```bash
-cd apps/api
-npx next dev -H 0.0.0.0 -p 3000
-```
-
-2. **Start Expo development server:**
-```bash
-cd apps/mobile
-npx expo start --host lan
-```
-
-3. **Connect on your phone:**
-- Install [Expo Go](https://expo.dev/go) on your iOS or Android device
-- Scan the QR code shown in your terminal
-- Make sure your phone and PC are on the same WiFi network
-
-### Build APK Locally
-```bash
-cd apps/mobile
-npx expo prebuild
-cd android
-./gradlew assembleRelease
-# APK: android/app/build/outputs/apk/release/app-release.apk
-```
-
-### Mobile App Structure
-```
-apps/mobile/
-├── app/
-│   ├── (tabs)/           # Tab navigation
-│   │   ├── index.tsx     # Home screen
-│   │   ├── search.tsx    # Search screen
-│   │   └── library.tsx   # Library screen
-│   └── _layout.tsx       # Root layout
-├── components/           # Reusable UI components
-│   ├── TrackRow.tsx
-│   ├── PlaylistCard.tsx
-│   └── NowPlayingBar.tsx
-├── lib/
-│   ├── api.ts           # API client
-│   └── config.ts        # API configuration (LAN IP)
-└── constants/
-    └── Colors.ts        # Spoookify color palette
-```
-
-### Configuration
-The mobile app connects to the API at `http://10.80.159.1:3000` in development mode. Update `lib/config.ts` if your PC's IP address changes.
