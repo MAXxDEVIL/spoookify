@@ -450,6 +450,15 @@ Download binaries directly from [bin/](https://github.com/MAXxDEVIL/spoookify/tr
 
 The Spoookify mobile app is built with Expo and React Native, providing a native mobile experience.
 
+### Download APK (Android)
+Download and install the prebuilt APK directly on your Android device:
+
+1. **Download** - Get the latest `spoookify-v0.1.0.apk` from [GitHub Releases](https://github.com/MAXxDEVIL/spoookify/releases)
+2. **Allow Installation** - Enable "Install from unknown sources" in your Android settings for your browser/file manager
+3. **Install** - Open the downloaded APK and follow the prompts to install
+4. **Start API** - On your PC, run `cd apps/api && npx next dev -H 0.0.0.0 -p 3000` (must be on same WiFi network)
+5. **Launch** - Open the Spoookify app on your device
+
 ### Features
 - **Home Tab** - Browse recommended content and playlists
 - **Search Tab** - Search for tracks, artists, albums, and playlists
@@ -457,7 +466,7 @@ The Spoookify mobile app is built with Expo and React Native, providing a native
 - **Dark Theme** - Spoookify's custom indigo color scheme
 - **API Integration** - Connects to the shared Next.js API
 
-### Running the Mobile App
+### Running in Development (Expo Go)
 
 1. **Start the API server on your network:**
 ```bash
@@ -475,6 +484,15 @@ npx expo start --host lan
 - Install [Expo Go](https://expo.dev/go) on your iOS or Android device
 - Scan the QR code shown in your terminal
 - Make sure your phone and PC are on the same WiFi network
+
+### Build APK Locally
+```bash
+cd apps/mobile
+npx expo prebuild
+cd android
+./gradlew assembleRelease
+# APK: android/app/build/outputs/apk/release/app-release.apk
+```
 
 ### Mobile App Structure
 ```
