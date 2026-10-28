@@ -445,3 +445,56 @@ Download binaries directly from [bin/](https://github.com/MAXxDEVIL/spoookify/tr
 
 **Current Version:** 0.1.0
 
+
+## Mobile App
+
+The Spoookify mobile app is built with Expo and React Native, providing a native mobile experience.
+
+### Features
+- **Home Tab** - Browse recommended content and playlists
+- **Search Tab** - Search for tracks, artists, albums, and playlists
+- **Library Tab** - Access your playlists and liked songs
+- **Dark Theme** - Spoookify's custom indigo color scheme
+- **API Integration** - Connects to the shared Next.js API
+
+### Running the Mobile App
+
+1. **Start the API server on your network:**
+```bash
+cd apps/api
+npx next dev -H 0.0.0.0 -p 3000
+```
+
+2. **Start Expo development server:**
+```bash
+cd apps/mobile
+npx expo start --host lan
+```
+
+3. **Connect on your phone:**
+- Install [Expo Go](https://expo.dev/go) on your iOS or Android device
+- Scan the QR code shown in your terminal
+- Make sure your phone and PC are on the same WiFi network
+
+### Mobile App Structure
+```
+apps/mobile/
+├── app/
+│   ├── (tabs)/           # Tab navigation
+│   │   ├── index.tsx     # Home screen
+│   │   ├── search.tsx    # Search screen
+│   │   └── library.tsx   # Library screen
+│   └── _layout.tsx       # Root layout
+├── components/           # Reusable UI components
+│   ├── TrackRow.tsx
+│   ├── PlaylistCard.tsx
+│   └── NowPlayingBar.tsx
+├── lib/
+│   ├── api.ts           # API client
+│   └── config.ts        # API configuration (LAN IP)
+└── constants/
+    └── Colors.ts        # Spoookify color palette
+```
+
+### Configuration
+The mobile app connects to the API at `http://10.80.159.1:3000` in development mode. Update `lib/config.ts` if your PC's IP address changes.
